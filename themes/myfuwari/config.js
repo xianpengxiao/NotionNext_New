@@ -1,0 +1,170 @@
+/**
+ * Fuwari 主题专用配置
+ *
+ * �?NotionNext �?`blog.config.js` 合并后生效；可在博客配置里覆盖任意项�?
+ * 布尔项：true 显示/启用，false 隐藏/关闭�?
+ */
+
+const CONFIG = {
+  // ---------------------------------------------------------------------------
+  // 导航（桌面顶�?+ �?MYFUWARI_MOBILE_MENU 影响的移动菜单项�?
+  // ---------------------------------------------------------------------------
+  /** 显示「首页�?*/
+  MYFUWARI_MENU_INDEX: true,
+  /** 显示「归档�?*/
+  MYFUWARI_MENU_ARCHIVE: true,
+  /** 显示「分类�?*/
+  MYFUWARI_MENU_CATEGORY: true,
+  /** 显示「标签�?*/
+  MYFUWARI_MENU_TAG: true,
+  /** 显示「搜索」（Algolia 或站内搜索由全局配置决定�?*/
+  MYFUWARI_MENU_SEARCH: true,
+
+  // ---------------------------------------------------------------------------
+  // 首页文章列表卡片
+  // ---------------------------------------------------------------------------
+  /** 是否显示右侧封面图区�?*/
+  MYFUWARI_POST_LIST_COVER: true,
+  /** 无文章封面时，是否用站点横幅图（HOME_BANNER_IMAGE）作默认�?*/
+  MYFUWARI_POST_LIST_COVER_DEFAULT: false,
+  /** 封面悬停轻微放大 */
+  MYFUWARI_POST_LIST_COVER_HOVER_ENLARGE: true,
+  /** 显示摘要（有 summary 时） */
+  MYFUWARI_POST_LIST_SUMMARY: true,
+  /** 卡片内显示标�?*/
+  MYFUWARI_POST_LIST_TAG: true,
+  /** 桌面端列表卡片封面列宽度（px），增大则更扁长横向 */
+  MYFUWARI_POST_LIST_COVER_COL_WIDTH: 280,
+
+  // ---------------------------------------------------------------------------
+  // 移动�?
+  // ---------------------------------------------------------------------------
+  /** 右侧汉堡菜单（含导航项）；关闭后小屏仅保留顶栏图�?*/
+  MYFUWARI_MOBILE_MENU: true,
+
+  // ---------------------------------------------------------------------------
+  // 首页 Hero 大图区（封面来自站点信息或下方图片配置）
+  // ---------------------------------------------------------------------------
+  /** 是否渲染 Hero 区块（无图时仍占位，可按需关） */
+  MYFUWARI_HERO_ENABLE: false,
+  /** 自定义背景图 URL；留空则�?Notion 站点封面�?HOME_BANNER_IMAGE */
+  MYFUWARI_HERO_BG_IMAGE: '',
+  /** 右下角署名文案；留空不显�?*/
+  MYFUWARI_HERO_CREDIT_TEXT: '',
+  /** 署名链接 */
+  MYFUWARI_HERO_CREDIT_LINK: '',
+
+  // ---------------------------------------------------------------------------
+  // 侧栏（SidePanel）小部件
+  // ---------------------------------------------------------------------------
+  /** 公告（有公告数据时） */
+  MYFUWARI_WIDGET_NOTICE: false,
+  /** 最新文章列�?*/
+  MYFUWARI_WIDGET_LATEST_POSTS: false,
+  /** 分类�?列表 */
+  MYFUWARI_WIDGET_CATEGORY_LIST: true,
+  /** 标签�?列表 */
+  MYFUWARI_WIDGET_TAG_LIST: true,
+  /** 侧栏头像/昵称下的「个人页」链接路�?*/
+  MYFUWARI_PROFILE_PATH: '/about',
+  /** 联系/社群入口卡片 */
+  MYFUWARI_WIDGET_CONTACT: false,
+  /** 侧栏广告位总开�?*/
+  MYFUWARI_WIDGET_AD: false,
+  /** 侧栏广告位内：是否渲�?WWAds */
+  MYFUWARI_WIDGET_WWADS: true,
+  /** 侧栏广告位内：是否渲�?AdSense 槽位 */
+  MYFUWARI_WIDGET_ADSENSE: false,
+  /** 插件注入区域卡片 */
+  MYFUWARI_WIDGET_PLUGIN_AREA: true,
+  /** 访问量等统计卡片 */
+  MYFUWARI_WIDGET_ANALYTICS: false,
+  /** 顶栏调色板内的色相滑块等；false 时展开调色板无控件 */
+  MYFUWARI_WIDGET_THEME_COLOR_SWITCHER: true,
+  /** 默认品牌色相 0�?60 */
+  MYFUWARI_THEME_COLOR_HUE: 52,
+  /** true：隐藏顶栏调色盘按钮，无法在站内改色�?*/
+  MYFUWARI_THEME_COLOR_FIXED: false,
+  /** 文章页右侧浮动区：跳转评论区按钮 */
+  MYFUWARI_WIDGET_TO_COMMENT: true,
+  /** 文章页右侧浮动区：深色模式切�?*/
+  MYFUWARI_WIDGET_DARK_MODE: true,
+  /** 文章页目录：桌面在侧栏；小屏为浮动按钮抽屉（RightFloatArea�?*/
+  MYFUWARI_ARTICLE_TOC: true,
+
+  // ---------------------------------------------------------------------------
+  // 联系卡片（侧栏，可翻转）
+  // ---------------------------------------------------------------------------
+  /** 正面标题 */
+  MYFUWARI_CONTACT_TITLE: '社区',
+  /** 正面说明文案 */
+  MYFUWARI_CONTACT_DESCRIPTION: '欢迎交流与反�?,
+  /** 正面右上角徽�?*/
+  MYFUWARI_CONTACT_FRONT_BADGE: 'Community',
+  /** 跳转 URL（外链或站内路径�?*/
+  MYFUWARI_CONTACT_URL: 'https://docs.tangly1024.com/article/chat-community',
+  /** 正面行动文案（如「联系我�?→」） */
+  MYFUWARI_CONTACT_TEXT: '查看',
+  /** 是否使用正反面翻转卡�?*/
+  MYFUWARI_CONTACT_FLIP_CARD: true,
+  /** 背面标题 */
+  MYFUWARI_CONTACT_BACK_TITLE: '支持内容',
+  /** 背面说明 */
+  MYFUWARI_CONTACT_BACK_DESCRIPTION: '可提交问题、建议与合作意向�?,
+  /** 背面行动文案 */
+  MYFUWARI_CONTACT_BACK_TEXT: '查看',
+
+  // ---------------------------------------------------------------------------
+  // 首页 Hero 个人信息�?
+  // ---------------------------------------------------------------------------
+  /** 问候语前缀（显示在作者名前） */
+  MYFUWARI_HERO_GREETING: '👋 你好，我�?,
+  /** 个人简介（支持 HTML 标签，如 <span class="underline">强调�?/span>�?*/
+  MYFUWARI_HERO_BIO: '一名在�?span class="underline decoration-[var(--fuwari-primary)] underline-offset-2">大学�?/span>。分享项目完成过程中的各�?span class="underline decoration-[var(--fuwari-primary)] underline-offset-2">重要点和经验</span>�?,
+  /** 「联系我」按钮跳转链�?*/
+  MYFUWARI_HERO_CONTACT_LINK: '/contact',
+  /** 「联系我」按钮文�?*/
+  MYFUWARI_HERO_CONTACT_TEXT: '联系�?,
+
+  // ---------------------------------------------------------------------------
+  // 首页四宫格信息卡�?
+  // ---------------------------------------------------------------------------
+  /** 卡片 1 �?图标（FontAwesome class�?*/
+  MYFUWARI_CARD_1_ICON: 'fas fa-robot',
+  /** 卡片 1 �?小标�?*/
+  MYFUWARI_CARD_1_TITLE: '状�?,
+  /** 卡片 1 �?描述 */
+  MYFUWARI_CARD_1_DESC: '找工作ing',
+  /** 卡片 2 �?图标 */
+  MYFUWARI_CARD_2_ICON: 'fas fa-user',
+  /** 卡片 2 �?小标�?*/
+  MYFUWARI_CARD_2_TITLE: '模式',
+  /** 卡片 2 �?描述 */
+  MYFUWARI_CARD_2_DESC: 'AI辅助代码实践项目',
+
+  // ---------------------------------------------------------------------------
+  // 全站动效（按需开启，可能影响性能�?
+  // ---------------------------------------------------------------------------
+  /** Lenis 平滑滚动 */
+  MYFUWARI_EFFECT_LENIS: false,
+  /** 自定义光标圆�?*/
+  MYFUWARI_EFFECT_CURSOR_DOT: false,
+
+  // ---------------------------------------------------------------------------
+  // 文章�?
+  // ---------------------------------------------------------------------------
+  /** �?Notion 封面时，在详情页文章卡片内顶部展示封面图（object-cover，不占满屏） */
+  MYFUWARI_ARTICLE_COVER_HERO: false,
+  /** 文首：日期、分类、标签等元信�?*/
+  MYFUWARI_ARTICLE_META: true,
+  /** 分享�?*/
+  MYFUWARI_ARTICLE_SHARE: false,
+  /** 文末版权信息�?*/
+  MYFUWARI_ARTICLE_COPYRIGHT: false,
+  /** 文末评论区（需�?`blog.config.js` 配置任一种评论服务，�?COMMENT_GISCUS_REPO / COMMENT_TWIKOO_ENV_ID 等，否则不渲染） */
+  MYFUWARI_ARTICLE_COMMENT: true,
+  /** 文末上一�?/ 下一�?*/
+  MYFUWARI_ARTICLE_ADJACENT: true
+}
+
+export default CONFIG
