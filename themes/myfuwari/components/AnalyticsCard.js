@@ -1,4 +1,4 @@
-import SmartLink from '@/components/SmartLink'
+﻿import SmartLink from '@/components/SmartLink'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import CONFIG from '../config'
@@ -16,7 +16,7 @@ const AnalyticsCard = ({ postCount = 0, categoryOptions = [], tagOptions = [] })
   const { locale, lang } = useGlobal()
   if (!siteConfig('MYFUWARI_WIDGET_ANALYTICS', true, CONFIG)) return null
 
-  // zh-* �?COMMON.POSTS 多为「篇文章」，不适合单独作统计标签，改用「文章�?
+  // zh-* 的 COMMON.POSTS 多为「篇文章」，不适合单独作统计标签，改用「文章」
   const postsLabel = /^zh-(CN|TW|HK)$/i.test(lang || '')
     ? locale?.COMMON?.ARTICLE || '文章'
     : locale?.COMMON?.POSTS || locale?.COMMON?.ARTICLE || 'Posts'

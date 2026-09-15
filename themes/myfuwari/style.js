@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unknown-property */
+﻿/* eslint-disable react/no-unknown-property */
 
 const Style = () => {
   return <style jsx global>{`
@@ -594,7 +594,7 @@ const Style = () => {
     #theme-myfuwari #posts-wrapper > article {
       animation: myfuwari-enter .28s ease both;
     }
-    /* Readmore �?modal 使用 fixed 定位；文章主卡若保留 transform/animation 会把它困在卡片内 */
+    /* Readmore 的 modal 使用 fixed 定位；文章主卡若保留 transform/animation 会把它困在卡片内 */
     #theme-myfuwari article.myfuwari-card {
       animation: none !important;
       transform: none !important;

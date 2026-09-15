@@ -1,4 +1,4 @@
-import SmartLink from '@/components/SmartLink'
+﻿import SmartLink from '@/components/SmartLink'
 import { siteConfig } from '@/lib/config'
 
 const Footer = () => {
@@ -12,10 +12,10 @@ const Footer = () => {
             首页
           </SmartLink>
           <SmartLink href='/about' className='text-sm text-[var(--myfuwari-muted)] hover:text-[var(--myfuwari-primary)] transition-colors'>
-            关于�?
+            关于我
           </SmartLink>
           <SmartLink href='/contact' className='text-sm text-[var(--myfuwari-muted)] hover:text-[var(--myfuwari-primary)] transition-colors'>
-            联系�?
+            联系我
           </SmartLink>
         </nav>
         <div className='text-sm text-[var(--myfuwari-muted)]'>

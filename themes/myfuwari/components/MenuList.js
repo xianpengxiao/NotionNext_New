@@ -1,4 +1,4 @@
-import SmartLink from '@/components/SmartLink'
+﻿import SmartLink from '@/components/SmartLink'
 import { useState } from 'react'
 import { getFuwariMenuLinks } from './menu'
 

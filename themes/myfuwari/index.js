@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import replaceSearchResult from '@/components/Mark'
 import NotionPage from '@/components/NotionPage'
@@ -87,16 +87,16 @@ const LayoutBase = props => {
 const LayoutIndex = props => {
   const locale = getLocale()
   const author = siteConfig('AUTHOR') || ''
-  const greeting = siteConfig('MYFUWARI_HERO_GREETING', "👋 你好，我�?, CONFIG)
+  const greeting = siteConfig('MYFUWARI_HERO_GREETING', "👋 你好，我是", CONFIG)
   const bio = siteConfig('MYFUWARI_HERO_BIO', '', CONFIG)
   const contactLink = siteConfig('MYFUWARI_HERO_CONTACT_LINK', '/contact', CONFIG)
-  const contactText = siteConfig('MYFUWARI_HERO_CONTACT_TEXT', '联系�?, CONFIG)
+  const contactText = siteConfig('MYFUWARI_HERO_CONTACT_TEXT', '联系我', CONFIG)
   const latestPosts = (props.latestPosts || props.posts || []).slice(0, 5)
 
   const infoCards = [
     {
       icon: siteConfig('MYFUWARI_CARD_1_ICON', 'fas fa-robot', CONFIG),
-      title: siteConfig('MYFUWARI_CARD_1_TITLE', '状�?, CONFIG),
+      title: siteConfig('MYFUWARI_CARD_1_TITLE', '状态', CONFIG),
       desc: siteConfig('MYFUWARI_CARD_1_DESC', '找工作ing', CONFIG)
     },
     {
@@ -119,13 +119,13 @@ const LayoutIndex = props => {
     return m ? parseInt(m[1], 10) : -1
   }
 
-  /** 获取发布时间�?*/
+  /** 获取发布时间戳 */
   const getPostTime = post => {
     const d = post.publishDay || post.date?.start_date || post.createdTime
     return d ? new Date(d).getTime() : 0
   }
 
-  /** 排序：E 编号降序 �?时间降序 */
+  /** 排序：E 编号降序 → 时间降序 */
   const sortPosts = posts => {
     return [...posts].sort((a, b) => {
       const ea = extractENumber(a.title)
@@ -137,10 +137,10 @@ const LayoutIndex = props => {
     })
   }
 
-  /** 截取�?0字摘�?*/
+  /** 截取前40字摘要 */
   const getSummary = post => {
     const text = post.summary || post.textContent || ''
-    return text.length > 40 ? text.slice(0, 40) + '�? : text
+    return text.length > 40 ? text.slice(0, 40) + '…' : text
   }
 
   const sortedPosts = sortPosts(latestPosts)
@@ -168,7 +168,7 @@ const LayoutIndex = props => {
         </a>
       </div>
 
-      {/* ====== 四宫�?====== */}
+      {/* ====== 四宫格 ====== */}
       <div className='grid grid-cols-2 gap-3'>
         {infoCards.map(card => (
           <div key={card.title} className='myfuwari-card p-4'>
@@ -187,7 +187,7 @@ const LayoutIndex = props => {
         ))}
       </div>
 
-      {/* ====== 最新文�?====== */}
+      {/* ====== 最新文章 ====== */}
       <div className='myfuwari-card p-5'>
         <div className='flex items-center justify-between mb-3'>
           <span className='text-xs uppercase tracking-widest text-[var(--myfuwari-muted)] font-semibold'>
@@ -341,7 +341,7 @@ const Layout404 = () => {
     <div className='myfuwari-card p-8 text-center'>
       <h1 className='text-4xl font-bold mb-2'>404</h1>
       <p className='text-sm text-[var(--myfuwari-muted)] mb-4'>
-        {locale?.NAV?.['404'] || '页面不存�?}
+        {locale?.NAV?.['404'] || '页面不存在'}
       </p>
       <SmartLink href='/' className='myfuwari-link'>{locale?.NAV?.INDEX || '首页'}</SmartLink>
     </div>

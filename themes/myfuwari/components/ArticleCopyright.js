@@ -1,4 +1,4 @@
-import SmartLink from '@/components/SmartLink'
+﻿import SmartLink from '@/components/SmartLink'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import {
@@ -53,7 +53,7 @@ const ArticleCopyright = ({ post }) => {
   return (
     <section className='mt-6 myfuwari-card p-4 text-sm text-[var(--myfuwari-muted)] leading-7'>
       <div>
-        <span className='font-semibold mr-2'>{locale?.COMMON?.AUTHOR || '作�?}:</span>
+        <span className='font-semibold mr-2'>{locale?.COMMON?.AUTHOR || '作者'}:</span>
         <SmartLink href={profileHref} className='myfuwari-link'>
           {authorName}
         </SmartLink>
@@ -69,7 +69,7 @@ const ArticleCopyright = ({ post }) => {
       <div className='mt-3'>
         <button type='button' onClick={handleCopy} className='myfuwari-copy-btn'>
           <i className='far fa-copy mr-1' />
-          {copied ? (locale?.COMMON?.COPIED || '已复�?) : (locale?.COMMON?.COPY_URL || '复制链接')}
+          {copied ? (locale?.COMMON?.COPIED || '已复制') : (locale?.COMMON?.COPY_URL || '复制链接')}
         </button>
       </div>
     </section>

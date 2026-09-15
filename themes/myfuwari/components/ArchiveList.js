@@ -1,4 +1,4 @@
-const formatDate = d => {
+﻿const formatDate = d => {
   if (!d) return ''
   const s = String(d)
   const m = s.match(/^(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})/)
@@ -7,7 +7,7 @@ const formatDate = d => {
 
 const getSummary = post => {
   const text = post?.summary || post?.textContent || ''
-  return text.length > 40 ? text.slice(0, 40) + '�? : text
+  return text.length > 40 ? text.slice(0, 40) + '…' : text
 }
 
 const toMonthAnchor = month => `archive-${String(month).replace(/[^0-9a-zA-Z_-]/g, '-')}`

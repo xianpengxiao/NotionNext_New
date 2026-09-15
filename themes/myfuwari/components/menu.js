@@ -1,4 +1,4 @@
-import { siteConfig } from '@/lib/config'
+﻿import { siteConfig } from '@/lib/config'
 import CONFIG from '../config'
 
 const normalizeSubMenus = subMenus =>
@@ -67,7 +67,7 @@ export function getFuwariMenuLinks({ locale, customNav, customMenu }) {
     links = links.concat(customNav)
   }
 
-  // �?heo/hexo 兼容: 开�?CUSTOM_MENU 后完全使�?Notion Config 菜单
+  // 与 heo/hexo 兼容: 开启 CUSTOM_MENU 后完全使用 Notion Config 菜单
   if (siteConfig('CUSTOM_MENU') && Array.isArray(customMenu)) {
     links = customMenu
   }

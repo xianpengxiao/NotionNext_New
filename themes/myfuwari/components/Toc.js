@@ -1,11 +1,11 @@
-import throttle from 'lodash.throttle'
+﻿import throttle from 'lodash.throttle'
 import { isBrowser } from '@/lib/utils'
 import { uuidToId } from 'notion-utils'
 import { useEffect, useMemo, useState } from 'react'
 
 /**
- * �?gitbook/Catalog 对齐：currentSectionId 每次�?null 重算，勿用上一�?activeSection 作初值，否则滚动判定错误�?
- * tocIds 在节流回调内用稳定列表计算索引；-1 时需回落�?0；侧栏与移动端抽屉内各有一份目录时需同步滚动（class 选择所有容器）�?
+ * 与 gitbook/Catalog 对齐：currentSectionId 每次从 null 重算，勿用上一帧 activeSection 作初值，否则滚动判定错误；
+ * tocIds 在节流回调内用稳定列表计算索引；-1 时需回落为 0；侧栏与移动端抽屉内各有一份目录时需同步滚动（class 选择所有容器）。
  */
 const Toc = ({ toc }) => {
   const [activeSection, setActiveSection] = useState(null)

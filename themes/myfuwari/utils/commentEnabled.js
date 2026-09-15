@@ -1,4 +1,4 @@
-import { siteConfig } from '@/lib/config'
+﻿import { siteConfig } from '@/lib/config'
 
 /**
  * 是否与 `components/Comment.js` 中实际会渲染的评论源一致。

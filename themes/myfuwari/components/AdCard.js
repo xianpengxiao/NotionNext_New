@@ -1,4 +1,4 @@
-import { AdSlot } from '@/components/GoogleAdsense'
+﻿import { AdSlot } from '@/components/GoogleAdsense'
 import WWAds from '@/components/WWAds'
 import { siteConfig } from '@/lib/config'
 import CONFIG from '../config'

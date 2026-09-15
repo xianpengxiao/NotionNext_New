@@ -1,4 +1,4 @@
-import FlipCard from '@/components/FlipCard'
+ï»¿import FlipCard from '@/components/FlipCard'
 import { siteConfig } from '@/lib/config'
 import CONFIG from '../config'
 
@@ -60,7 +60,7 @@ const ContactCard = () => {
           {desc}
         </p>
       )}
-      {url && <p className='myfuwari-link text-sm font-medium'>{text} â†?/p>}
+      {url && <p className='myfuwari-link text-sm font-medium'>{text} â†’</p>}
     </div>
   )
 
@@ -71,7 +71,7 @@ const ContactCard = () => {
         {backDesc}
       </p>
       {url && (
-        <p className='myfuwari-link text-sm font-medium'>{backText} â†?/p>
+        <p className='myfuwari-link text-sm font-medium'>{backText} â†’</p>
       )}
     </div>
   )

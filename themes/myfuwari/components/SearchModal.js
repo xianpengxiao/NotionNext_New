@@ -1,11 +1,13 @@
-import { useGlobal } from '@/lib/global'
+﻿import { useGlobal } from '@/lib/global'
 import { useRouter } from 'next/router'
 import { useEffect, useImperativeHandle, useRef, useState } from 'react'
 import { useHotkeys } from 'react-hotkeys-hook'
 
 /**
- * mymyfuwari 全局搜索弹窗 �?支持 Algolia 和本地搜�? *
- * 使用方式�? *   const searchRef = useRef(null)
+ * mymyfuwari 全局搜索弹窗 — 支持 Algolia 和本地搜索
+ *
+ * 使用方式：
+ *   const searchRef = useRef(null)
  *   <SearchModal cRef={searchRef} posts={posts} />
  *   searchRef.current.openSearch()
  */
@@ -28,7 +30,8 @@ export default function SearchModal({ cRef, posts = [] }) {
     setIsOpen(false)
   }, [router])
 
-  // 打开时自动聚�?  useEffect(() => {
+  // 打开时自动聚焦
+  useEffect(() => {
     if (isOpen) {
       setTimeout(() => inputRef.current?.focus(), 100)
       setKeyword('')
@@ -37,7 +40,8 @@ export default function SearchModal({ cRef, posts = [] }) {
     }
   }, [isOpen])
 
-  // 快捷�?  useHotkeys('ctrl+k', e => {
+  // 快捷键
+  useHotkeys('ctrl+k', e => {
     e.preventDefault()
     setIsOpen(true)
   })
@@ -96,7 +100,7 @@ export default function SearchModal({ cRef, posts = [] }) {
           <input
             ref={inputRef}
             type='text'
-            placeholder={locale?.SEARCH?.ARTICLES || '搜索文章�?}
+            placeholder={locale?.SEARCH?.ARTICLES || '搜索文章…'}
             value={keyword}
             onChange={e => handleSearch(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -143,14 +147,15 @@ export default function SearchModal({ cRef, posts = [] }) {
         {/* 底部提示 */}
         {!keyword && (
           <div className='flex items-center gap-4 px-5 py-3 border-t border-[var(--myfuwari-border)] text-[11px] text-[var(--myfuwari-muted)]'>
-            <span><kbd className='myfuwari-search-kbd'>�?/kbd> <kbd className='myfuwari-search-kbd'>�?/kbd> 导航</span>
+            <span><kbd className='myfuwari-search-kbd'>↑</kbd> <kbd className='myfuwari-search-kbd'>↓</kbd> 导航</span>
             <span><kbd className='myfuwari-search-kbd'>Enter</kbd> 跳转</span>
             <span><kbd className='myfuwari-search-kbd'>Esc</kbd> 关闭</span>
           </div>
         )}
         {keyword && results.length > 0 && (
           <div className='px-5 py-2.5 border-t border-[var(--myfuwari-border)] text-[11px] text-[var(--myfuwari-muted)]'>
-            找到 {results.length} 篇相关文�?          </div>
+            找到 {results.length} 篇相关文章
+          </div>
         )}
       </div>
 

@@ -1,4 +1,4 @@
-import { siteConfig } from '@/lib/config'
+﻿import { siteConfig } from '@/lib/config'
 import Announcement from './Announcement'
 import CONFIG from '../config'
 

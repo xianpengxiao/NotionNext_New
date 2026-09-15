@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import CONFIG from '../config'
@@ -65,7 +65,7 @@ const RightFloatArea = ({ post }) => {
         )}
         {siteConfig('MYFUWARI_WIDGET_DARK_MODE', true, CONFIG) && (
           <button className='myfuwari-float-btn' onClick={toggleDarkMode}>
-            {isDarkMode ? '☀' : '�?}
+            {isDarkMode ? '☀' : '☾'}
           </button>
         )}
       </div>

@@ -1,4 +1,4 @@
-import SmartLink from '@/components/SmartLink'
+﻿import SmartLink from '@/components/SmartLink'
 import { siteConfig } from '@/lib/config'
 import CONFIG from '../config'
 
@@ -11,7 +11,7 @@ const formatDate = d => {
 
 const getSummary = post => {
   const text = post?.summary || post?.textContent || ''
-  return text.length > 40 ? text.slice(0, 40) + '�? : text
+  return text.length > 40 ? text.slice(0, 40) + '…' : text
 }
 
 const AdjacentCard = ({ label, post }) => {

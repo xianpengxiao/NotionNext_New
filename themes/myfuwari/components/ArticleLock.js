@@ -1,4 +1,4 @@
-import { useGlobal } from '@/lib/global'
+﻿import { useGlobal } from '@/lib/global'
 import { useEffect, useRef, useState } from 'react'
 
 const ArticleLock = ({ validPassword }) => {
@@ -24,9 +24,9 @@ const ArticleLock = ({ validPassword }) => {
       <div className='text-3xl mb-3 text-[var(--myfuwari-primary)]'>
         <i className='fas fa-lock' />
       </div>
-      <h2 className='text-xl font-semibold mb-2'>{locale?.COMMON?.ARTICLE_LOCK_TIPS || '这篇文章已加�?}</h2>
+      <h2 className='text-xl font-semibold mb-2'>{locale?.COMMON?.ARTICLE_LOCK_TIPS || '这篇文章已加密'}</h2>
       <p className='text-sm text-[var(--myfuwari-muted)] mb-4'>
-        {locale?.COMMON?.INPUT_PASSWORD || '请输入访问密�?}
+        {locale?.COMMON?.INPUT_PASSWORD || '请输入访问密码'}
       </p>
 
       <div className='max-w-sm mx-auto flex'>
@@ -37,7 +37,7 @@ const ArticleLock = ({ validPassword }) => {
           onChange={e => setPassword(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && submitPassword()}
           className='flex-1 rounded-l-xl border border-[var(--myfuwari-border)] bg-[var(--myfuwari-bg-soft)] px-4 py-2 text-sm outline-none focus:border-[var(--myfuwari-primary)]'
-          placeholder={locale?.COMMON?.INPUT_PASSWORD || '请输入访问密�?}
+          placeholder={locale?.COMMON?.INPUT_PASSWORD || '请输入访问密码'}
         />
         <button
           type='button'

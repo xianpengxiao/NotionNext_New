@@ -1,4 +1,4 @@
-import { siteConfig } from '@/lib/config'
+﻿import { siteConfig } from '@/lib/config'
 import { handleEmailClick } from '@/lib/plugins/mailEncrypt'
 import { useRef } from 'react'
 

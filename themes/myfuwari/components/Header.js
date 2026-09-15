@@ -1,4 +1,4 @@
-import SmartLink from '@/components/SmartLink'
+﻿import SmartLink from '@/components/SmartLink'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import { useEffect, useRef, useState } from 'react'
@@ -49,7 +49,7 @@ const Header = ({ locale, customNav, customMenu, searchModal }) => {
             </button>
           )}
           <button type='button' onClick={toggleDarkMode} className='myfuwari-tool-btn'>
-            {isDarkMode ? '☀' : '�?}
+            {isDarkMode ? '☀' : '☾'}
           </button>
         </div>
         <div className='md:hidden flex items-center justify-end gap-2 relative'>
@@ -66,7 +66,7 @@ const Header = ({ locale, customNav, customMenu, searchModal }) => {
             </button>
           )}
           <button type='button' onClick={toggleDarkMode} className='myfuwari-tool-btn'>
-            {isDarkMode ? '☀' : '�?}
+            {isDarkMode ? '☀' : '☾'}
           </button>
           <MobileNav locale={locale} customNav={customNav} customMenu={customMenu} />
         </div>

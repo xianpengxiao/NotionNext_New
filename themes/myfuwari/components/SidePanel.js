@@ -1,4 +1,4 @@
-import SmartLink from '@/components/SmartLink'
+﻿import SmartLink from '@/components/SmartLink'
 import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
@@ -74,7 +74,7 @@ const SidePanel = props => {
       {siteConfig('MYFUWARI_WIDGET_LATEST_POSTS', true, CONFIG) && latestPosts.length > 0 && (
         <section className='myfuwari-card p-5'>
           <h3 className='text-sm font-semibold mb-3 tracking-wide uppercase text-[var(--myfuwari-muted)]'>
-            {locale?.COMMON?.LATEST_POSTS || '最新发�?}
+            {locale?.COMMON?.LATEST_POSTS || '最新发布'}
           </h3>
           <div className='space-y-2'>
             {latestPosts.slice(0, 6).map(p => (
